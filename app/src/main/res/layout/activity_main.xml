@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <com.black.multi.customviewsample.demo01.CustomTextView
+            android:id="@+id/custom_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:paddingLeft="10dp"
             android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
             android:paddingTop="5dp"
             android:paddingBottom="10dp"
-            app:customText="我是自定义CustomTextView"
+            app:customText="点我"
             app:customTextColor="@color/colorPrimary"
             app:customTextSize="16sp" />
+
+        <com.black.multi.customviewsample.demo02.ArcProgressbar
+            android:id="@+id/arc_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:outerColor="@color/colorAccent"
+            app:innerColor="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            app:customTextSize="25sp"
+            app:progressTextColor="@color/colorPrimaryDark"
+            app:progressWidth="6"/>
     </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>

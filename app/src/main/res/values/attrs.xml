@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <attr name="customTextSize" format="dimension" />
+
     <declare-styleable name="CustomTextView">
-        <attr name="customText" format="string"/>
-        <attr name="customTextSize" format="dimension" />
+        <attr name="customText" format="string" />
+        <attr name="customTextSize"/>
         <attr name="customTextColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgressbar">
+        <attr name="progressWidth" format="integer" />
+        <attr name="outerColor" format="reference|color" />
+        <attr name="innerColor" format="reference|color" />
+        <attr name="progressText" format="string" />
+        <attr name="customTextSize"/>
+        <attr name="progressTextColor" format="reference|color" />
     </declare-styleable>
 </resources>

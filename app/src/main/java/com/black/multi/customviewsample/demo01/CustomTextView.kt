@@ -8,6 +8,7 @@ import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import com.black.multi.customviewsample.R
+import com.black.multi.customviewsample.utils.sp2Px
 
 /**
  * Created by wei.
@@ -16,7 +17,6 @@ import com.black.multi.customviewsample.R
  */
 
 const val DEFAULT_TEXT_SIZE = 15
-const val TAG = "ez"
 
 class CustomTextView @JvmOverloads constructor(
     context: Context,
@@ -24,17 +24,18 @@ class CustomTextView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : View(context, attr, defStyle) {
 
-    var mPaint: Paint = Paint()
-    var mText: String?
-    var mTextSize = 0.0f
-    var mTextColor = Color.BLACK
+    private var mPaint: Paint = Paint()
+    private var mText: String?
+    private var mTextSize = 0.0f
+    private var mTextColor = Color.BLACK
+    private val rect = Rect()
 
     init {
         val ta = context.obtainStyledAttributes(attr, R.styleable.CustomTextView)
         mText = ta.getString(R.styleable.CustomTextView_customText)
         mTextSize = ta.getDimensionPixelSize(
             R.styleable.CustomTextView_customTextSize,
-            sp2Px(DEFAULT_TEXT_SIZE)
+            sp2Px(DEFAULT_TEXT_SIZE,resources)
         ).toFloat()
         mTextColor = ta.getColor(R.styleable.CustomTextView_customTextColor, mTextColor)
         ta.recycle()
@@ -52,7 +53,6 @@ class CustomTextView @JvmOverloads constructor(
         var heightSize = MeasureSpec.getSize(heightMeasureSpec)
 
         if (widthMode == MeasureSpec.AT_MOST || widthMode == MeasureSpec.UNSPECIFIED) {//UNSPECIFIED：是为了兼容最外层是 ScrollView
-            val rect = Rect()
             mPaint.getTextBounds(mText, 0, mText!!.length, rect)
             widthSize = rect.width() + paddingLeft + paddingRight
         }
@@ -73,8 +73,4 @@ class CustomTextView @JvmOverloads constructor(
         canvas?.drawText(mText!!, paddingLeft.toFloat(), vY.toFloat(), mPaint)
     }
 
-
-    private fun sp2Px(data: Int): Int {
-        return TypedValue.complexToDimensionPixelSize(data, resources.displayMetrics)
-    }
 }
