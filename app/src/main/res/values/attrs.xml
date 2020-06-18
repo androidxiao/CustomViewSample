@@ -5,7 +5,7 @@
 
     <declare-styleable name="CustomTextView">
         <attr name="customText" format="string" />
-        <attr name="customTextSize"/>
+        <attr name="customTextSize" />
         <attr name="customTextColor" format="reference|color" />
     </declare-styleable>
 
@@ -14,7 +14,12 @@
         <attr name="outerColor" format="reference|color" />
         <attr name="innerColor" format="reference|color" />
         <attr name="progressText" format="string" />
-        <attr name="customTextSize"/>
+        <attr name="customTextSize" />
         <attr name="progressTextColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ChangeColorTextView">
+        <attr name="normalColor" format="color"/>
+        <attr name="selectedColor" format="color"/>
     </declare-styleable>
 </resources>

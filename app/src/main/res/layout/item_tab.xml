@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.black.multi.customviewsample.demo03.ChangeColorTextView
+    android:id="@+id/changeTextColor"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:textSize="16sp"
+    android:layout_height="wrap_content"/>
