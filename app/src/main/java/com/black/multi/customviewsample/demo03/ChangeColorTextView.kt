@@ -25,7 +25,7 @@ class ChangeColorTextView @JvmOverloads constructor(
     private var mSelectedColor = Color.RED
     private val rectF = Rect()
     private val rectText = Rect()
-    private var mCurProgress = 1f
+    private var mCurProgress = 0f
     private var mDirection:Direction = Direction.Right_To_Left
 
     enum class Direction {
@@ -113,27 +113,20 @@ class ChangeColorTextView @JvmOverloads constructor(
         canvas.restore()
     }
 
-    @Synchronized
     fun setCurProgress(progress:Float){
         mCurProgress = progress
         invalidate()
     }
 
-    @Synchronized
     fun setDirection(direction: Direction) {
         mDirection = direction
-        invalidate()
     }
 
-    @Synchronized
     fun setChangeColor(color:Int){
-        mSelectedColor = color
-        invalidate()
+        mSelectedPaint.color = color
     }
 
-    @Synchronized
     fun setNormalColor(color: Int) {
-        mNormalColor = color
-        invalidate()
+        mNormalPaint.color = color
     }
 }
