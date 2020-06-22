@@ -46,6 +46,7 @@ class TabLayoutActivity : AppCompatActivity() {
         binding.tabLayout.setupWithViewPager(binding.vp)
         binding.vp.adapter = VpAdapter(supportFragmentManager, mFragments)
         val count = (binding.vp.adapter as VpAdapter).count
+        //动态修改 tab 为我们自定的 textview
         for (i in 0 until count) {
             val tab = binding.tabLayout.getTabAt(i)
             val view = LayoutInflater.from(applicationContext).inflate(R.layout.item_tab, null)
@@ -53,8 +54,9 @@ class TabLayoutActivity : AppCompatActivity() {
             textView?.text = mTitles[i]
             tab?.customView = textView
         }
-
+        //是不是点击，如果是，直接 setCurrentItem = curPosition
         var isClickTab = false
+        //点击后，恢复上一个 position 文字为正常颜色
         var prePosition = 0
 
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -81,6 +83,7 @@ class TabLayoutActivity : AppCompatActivity() {
                     SCROLL_STATE_IDLE -> {
                     }
                     SCROLL_STATE_DRAGGING -> {
+                        //当手动触发滑动时，需要重置
                         isClickTab = false
                     }
                     SCROLL_STATE_SETTLING -> {

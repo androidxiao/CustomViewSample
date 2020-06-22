@@ -55,16 +55,17 @@ class ChangeColorTextView @JvmOverloads constructor(
 
         //从左到右
 //        canvas.save()
-//        rectF.left = 0f
-//        rectF.top = 0f
-//        rectF.right = mCurProgress * width
-//        rectF.bottom = height.toFloat()
+//
+//        rectF.left = 0
+//        rectF.top = 0
+//        rectF.right = (mCurProgress * width).toInt()
+//        rectF.bottom = height
 //        canvas.clipRect(rectF)
 //        var fontMetricsInt = mNormalPaint.fontMetricsInt
 //        var vy = (fontMetricsInt.bottom - fontMetricsInt.top) / 2 - fontMetricsInt.bottom
 //        var baseLine = vy + height / 2
 //        mNormalPaint.getTextBounds(text.toString(), 0, text.length, rectText)
-        //文字起始位置
+////        文字起始位置
 //        var startX = (width - rectText.width()) / 2
 //        canvas.drawText(text.toString(), startX.toFloat(), baseLine.toFloat(), mNormalPaint)
 //        canvas.restore()
@@ -79,10 +80,11 @@ class ChangeColorTextView @JvmOverloads constructor(
 
         //从右到左
 //        canvas.save()
-//        rectF.left = (1-mCurProgress) * width
-//        rectF.top = 0f
-//        rectF.right = width.toFloat()
-//        rectF.bottom = height.toFloat()
+//        rectF.left = ((1-mCurProgress) * width).toInt()
+//        rectF.top = 0
+//        rectF.right = width
+//        rectF.bottom = height
+//
 //        canvas.clipRect(rectF)
 //        fontMetricsInt = mNormalPaint.fontMetricsInt
 //        vy = (fontMetricsInt.bottom - fontMetricsInt.top) / 2 - fontMetricsInt.bottom

@@ -37,12 +37,14 @@
             android:layout_marginTop="10dp"
             app:customTextSize="25sp"
             app:progressTextColor="@color/colorPrimaryDark"
+            android:visibility="gone"
             app:progressWidth="6"/>
 
         <com.black.multi.customviewsample.demo03.ChangeColorTextView
             android:id="@+id/changeTextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="标题"/>
+            android:layout_marginTop="40dp"
+            android:text="我是 canvas.clipRect() 方法的应用"/>
     </LinearLayout>
 </ScrollView>
