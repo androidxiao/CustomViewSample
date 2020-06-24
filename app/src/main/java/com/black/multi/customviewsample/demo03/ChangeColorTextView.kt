@@ -21,7 +21,7 @@ class ChangeColorTextView @JvmOverloads constructor(
 
     private var mNormalPaint = TextPaint()
     private var mSelectedPaint = TextPaint()
-    private var mNormalColor = Color.BLACK
+    private var mNormalColor = Color.WHITE
     private var mSelectedColor = Color.RED
     private val rectF = Rect()
     private val rectText = Rect()

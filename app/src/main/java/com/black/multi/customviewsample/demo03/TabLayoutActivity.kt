@@ -1,7 +1,9 @@
 package com.black.multi.customviewsample.demo03
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.animation.DecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -10,6 +12,7 @@ import androidx.viewpager.widget.ViewPager.*
 import com.black.multi.customviewsample.R
 import com.black.multi.customviewsample.databinding.ActivityTablayoutBinding
 import com.google.android.material.tabs.TabLayout
+
 
 /**
  * Created by wei.

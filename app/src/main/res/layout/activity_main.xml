@@ -46,5 +46,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="我是 canvas.clipRect() 方法的应用"/>
+
+        <com.black.multi.customviewsample.CircleProgressbar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:radiusWidth="50dp"/>
     </LinearLayout>
 </ScrollView>

@@ -2,17 +2,22 @@
 <resources>
 
     <attr name="customTextSize" format="dimension" />
+    <attr name="customTextColor" format="reference|color" />
+    <attr name="progressWidth" format="integer" />
+    <attr name="radiusWidth" format="dimension"/>
+    <attr name="outerColor" format="reference|color" />
+    <attr name="innerColor" format="reference|color" />
 
     <declare-styleable name="CustomTextView">
         <attr name="customText" format="string" />
         <attr name="customTextSize" />
-        <attr name="customTextColor" format="reference|color" />
+        <attr name="customTextColor" />
     </declare-styleable>
 
     <declare-styleable name="ArcProgressbar">
-        <attr name="progressWidth" format="integer" />
-        <attr name="outerColor" format="reference|color" />
-        <attr name="innerColor" format="reference|color" />
+        <attr name="progressWidth"/>
+        <attr name="outerColor"/>
+        <attr name="innerColor"/>
         <attr name="progressText" format="string" />
         <attr name="customTextSize" />
         <attr name="progressTextColor" format="reference|color" />
@@ -21,5 +26,14 @@
     <declare-styleable name="ChangeColorTextView">
         <attr name="normalColor" format="color"/>
         <attr name="selectedColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressbar">
+        <attr name="progressWidth"/>
+        <attr name="radiusWidth"/>
+        <attr name="outerColor"/>
+        <attr name="innerColor"/>
+        <attr name="customTextSize" />
+        <attr name="customTextColor" />
     </declare-styleable>
 </resources>
