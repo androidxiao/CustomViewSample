@@ -17,8 +17,13 @@ class MainActivity : AppCompatActivity() {
         custom_text.setOnClickListener {
 //            arcProgress()
 //            changeTextColor()
-            toTabPage()
+//            toTabPage()
+            view58()
         }
+    }
+
+    private fun view58(){
+        view58.startAnima()
     }
 
     private fun toTabPage(){

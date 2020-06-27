@@ -1,4 +1,4 @@
-package com.black.multi.customviewsample
+package com.black.multi.customviewsample.demo04
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -6,6 +6,7 @@ import android.graphics.*
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
+import com.black.multi.customviewsample.R
 import com.black.multi.customviewsample.utils.dp2Px
 import com.black.multi.customviewsample.utils.sp2Px
 
@@ -34,7 +35,9 @@ class CircleProgressbar @JvmOverloads constructor(
     private var mRectF = Rect()
 
     init {
-        val ta = context.obtainStyledAttributes(attributeSet, R.styleable.CircleProgressbar)
+        val ta = context.obtainStyledAttributes(attributeSet,
+            R.styleable.CircleProgressbar
+        )
         mOutColor = ta.getColor(R.styleable.CircleProgressbar_outerColor, mOutColor)
         mInnerColor = ta.getColor(R.styleable.CircleProgressbar_innerColor, mInnerColor)
         mTextColor = ta.getColor(R.styleable.CircleProgressbar_customTextColor, mTextColor)
@@ -43,7 +46,8 @@ class CircleProgressbar @JvmOverloads constructor(
             sp2Px(mTextSize, context.resources)
         )
         mProgressWidth = ta.getInt(R.styleable.CircleProgressbar_progressWidth, mProgressWidth)
-        mRadiusWidth = ta.getDimension(R.styleable.CircleProgressbar_radiusWidth,
+        mRadiusWidth = ta.getDimension(
+            R.styleable.CircleProgressbar_radiusWidth,
             dp2Px(mRadiusWidth.toInt(),context.resources).toFloat()
         )
         ta.recycle()
@@ -121,7 +125,9 @@ class CircleProgressbar @JvmOverloads constructor(
     }
 
     private fun stopAnim(){
-        valueAnim.cancel()
-        valueAnim.removeAllUpdateListeners()
+        valueAnim.apply {
+            cancel()
+            removeAllUpdateListeners()
+        }
     }
 }
