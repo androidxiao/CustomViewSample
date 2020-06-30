@@ -13,3 +13,5 @@ first init
 ![](https://github.com/androidxiao/CustomViewSample/blob/master/images/custom_textview.png)
 
 ![](https://github.com/androidxiao/CustomViewSample/blob/master/images/view58.gif)
+
+![](https://github.com/androidxiao/CustomViewSample/blob/master/images/ratingbar.gif)
