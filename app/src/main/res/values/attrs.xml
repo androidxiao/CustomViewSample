@@ -36,4 +36,12 @@
         <attr name="customTextSize" />
         <attr name="customTextColor" />
     </declare-styleable>
+
+    <declare-styleable name="KRatingbar">
+        <attr name="starNum" format="integer"/>
+        <attr name="starPadding" format="integer" />
+        <attr name="starNormal" format="reference" />
+        <attr name="starSelect" format="reference" />
+    </declare-styleable>
+
 </resources>

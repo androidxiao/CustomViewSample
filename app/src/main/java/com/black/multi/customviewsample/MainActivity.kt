@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun view58(){
-        view58.startAnima()
+        view58.startAnim()
     }
 
     private fun toTabPage(){
